@@ -1,0 +1,282 @@
+/*
+    Portfolio Responsive Style Sheet
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+/* Default page settins */
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #777777;
+    background: url("../images/concrete_seamless.png");
+    /* border: 1px solid red; */             /**** Debugging ****/
+}
+
+/* 
+    Default settings for all page content contained in header, footer,
+    or body
+*/
+.container {
+    /* border: 1px solid red; */                /**** Debugging ****/
+    max-width: 960px;                   /* Maximum width */
+    margin: 0 auto;                     /* Center box horizontally */
+    width: 100%;                        /* Span entire width */
+    clear: both;                        /* No floating elements on either side */
+}
+
+/*
+    Common element spacing
+*/
+h1,
+h2,
+h3,
+p {
+    margin-bottom: 20px;
+}
+p:last-child {
+    margin-bottom: 0;
+}
+
+/*
+    Common element styling
+*/
+h1,
+h2,
+h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color: #4aaaa5;
+}
+h1 {
+    padding-bottom: 20px;
+    font-size: 30px;
+    line-height: 49px;
+    border-bottom: 3px solid #dddddd;
+}
+h2,
+h3 {
+    font-size: 22px;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    line-height: 22px;
+    border-bottom: 2px solid #eeeeee;
+}
+
+/*
+    Style the header for all pages. It consists of the masthead which spans the
+    top of each page, a container which aligns the content of the header with
+    the page body, a logo which floats to the left, and navigation which floats
+    to the right.
+*/
+#masthead {
+    /* border: 1px solid blue; */             /**** Debugging ****/
+    position: fixed;                    /* Relative to browser window */
+    width: 100%;                        /* Fill width */
+    margin: 0 0 30px;                   /* No margin top, right, left; bottom 30px */
+    overflow: auto;                     /* Add scroll on overflow */
+    background-color: white;          /* White background */
+}
+#logo {                                 /* Logo */
+    /* border: 1px solid red; */              /**** Debugging ****/
+    width: 250px;
+    height: 90px;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 90px;
+    color: white;
+    background: #4aaaa5;
+    text-align: center;
+    text-decoration: none;
+    float: left;
+}
+nav {                                   /* Navigation */
+    /* border: 1px solid red; */              /**** Debugging ****/
+    float: right;
+    margin-top: 25px;
+}
+nav a {                                 /* Navigation links */
+    display: inline-block;
+    padding-left: 15px;
+    margin-left: 15px;
+    line-height: 18px;
+    color: #999;
+    text-decoration: none;
+    border-left: 1px solid #858383;
+}
+nav a:first-child {                     /* Remove separator on first link */
+    border-left: 0 none;
+}
+
+/*
+    Style the footer for all pages. It consists of the footer box, which spans
+    the page, and a container containing the copyright centered.
+*/
+footer {
+    /* border: 1px solid blue; */            /**** Debugging ****/
+    clear: both;
+    border-top: 8px solid #4aaaa5;
+    height: 60px;
+    padding: 10px 0;
+    background: darkgray;
+    color: seashell;
+    text-align: center;
+}
+
+/*
+    Style the main container for all pages. It creates padding at the top, and a
+    minimum vertical size.
+*/
+#main-container {
+    /* border: 1px solid red; */            /**** Debugging ****/
+    padding-top: 130px;
+    min-height: calc(100vh - 70px);
+}
+
+.main_section {
+    /* border: 1px solid red; */            /**** Debugging ****/
+    float: left;
+    width: 100%;
+    max-width: 960px;
+    padding: 30px;
+    margin: 0 0 40px;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+}
+
+/*
+    About Page
+*/
+.auth-image {
+    float: left;
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
+    margin-right: 25px;
+  }
+
+  /*
+    Portfolio page - Style and position images & titles
+  */
+  .work {
+      position: relative;
+      float: left;
+      width: 260px;
+      height: 240px;
+      margin: 20px 20px 25px;
+      overflow: auto;
+  }
+  .work:nth-child(even) {
+      margin-right: 40px;
+  }
+  .work img {
+      width: 100%;
+      border: 0 none;
+      opacity: 0.8;
+  }
+  .work h3 {
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+      padding: 20px;
+      margin-bottom: 0;
+      font-weight: 300;
+      line-height: 30px;
+      color: #ffffff;
+      text-align: center;
+      background: #4aaaa5;
+      border-bottom: 0;
+  }
+
+  .work h5 {
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+      margin-bottom: 0;
+      text-align: center;
+      border-bottom: 0;
+  }
+
+  /*
+    Contact page - Style and position form
+  */
+  #contact-form {
+      position: relative;
+      margin: 20px auto;
+      width: 100%;
+      height: 300px;
+  }
+  .form-group {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  label,
+  input[type-text],
+  input[type-email],
+  textarea {
+      height: 35px;
+      width: 100%;
+      padding: 0 10px;
+      font-size: 14px;
+      border: 2px solid #dddddd;
+  }
+  textarea {
+      height: 200px;
+  }
+  input[type-submit] {
+      padding: 10px 30px;
+      font-size: 18px;
+      color: #ffffff;
+      cursor: pointer;
+      background: #4aaaa5;
+      border: 0 none;
+  }
+
+  #submit-btn {
+      background: #4aaaa5;
+      color: #ffffff;
+      padding: 10px 20px;
+  }
+
+/********* Responsive media queries *********/
+
+/* xs - 600px and down (phones) */
+@media screen and (max-width: 600px) {     
+    .container {max-width: 480px;
+    }
+    .work {max-width: 180px;
+    }
+}
+/* sm - 600px and up (portrait tablets, large phones) */
+@media screen and (min-width: 600px) {
+    .container {max-width: 600px;
+    }
+    .work {max-width: 180px;
+    }
+}
+/* md - 768px and up (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    .container {max-width: 768px;
+    }
+    .work {max-width: 260px;
+    }
+}
+/* lg - 992px and up (laptops/desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    .container {max-width: 960px;
+    }
+    .work {max-width: 260px;
+    }
+}
+/* xl - 1200px and up (large laptops and desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+    .container {max-width: 960px;
+    }
+    .work {max-width: 260px;
+    }
+}
